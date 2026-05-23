@@ -1,0 +1,22 @@
+# Compiled binary
+/velog-mcp-go
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+*.out
+
+# Local env / runtime state
+.env
+.env.local
+*.token.json
+tokens.json
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
