@@ -12,10 +12,19 @@
 | `velog_write_post` | ✅ | 새 글 작성 (`is_temp=true`면 임시저장) |
 | `velog_edit_post` | ✅ | 기존 글 수정 (모든 필수 필드 재전송) |
 
-## 빌드
+## 설치
 
 ```bash
-cd /Users/seonwoo_jung/workspace/velog-mcp-go
+go install github.com/seonwooj0810/velog-mcp-go@latest
+```
+
+또는 [Releases](https://github.com/seonwooj0810/velog-mcp-go/releases)에서 OS별 바이너리를 내려받는다.
+
+## 빌드 (소스에서)
+
+```bash
+git clone https://github.com/seonwooj0810/velog-mcp-go.git
+cd velog-mcp-go
 go build -o velog-mcp-go
 ```
 

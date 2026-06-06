@@ -1,4 +1,4 @@
-module velog-mcp-go
+module github.com/seonwooj0810/velog-mcp-go
 
 go 1.25.0
 
