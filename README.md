@@ -1,6 +1,6 @@
 # velog-mcp-go
 
-[velog-mcp](https://github.com/seonwoo-jung/velog-mcp)의 Go 포팅. TypeScript 버전과 기능·옵션·환경변수가 1:1로 동일하며, 공식 [`modelcontextprotocol/go-sdk`](https://github.com/modelcontextprotocol/go-sdk)를 사용한다.
+[velog-mcp-server](https://github.com/seonwooj0810/velog-mcp-server)의 Go 포팅. 노출하는 도구 세트는 TypeScript 버전과 동일하며, 여기에 더해 refresh_token 기반 자동 재발급과 토큰 영속화를 지원한다. 공식 [`modelcontextprotocol/go-sdk`](https://github.com/modelcontextprotocol/go-sdk)를 사용한다.
 
 ## 노출되는 도구
 
@@ -79,7 +79,8 @@ claude mcp get velog
 
 ## TypeScript 원본과의 차이
 
-- 언어/런타임만 다르고 동작은 동일하다.
+- 노출하는 도구 세트와 옵션은 TypeScript 버전과 동일하다.
+- TypeScript 버전에는 없던 **refresh_token 자동 재발급**(`VELOG_REFRESH_TOKEN`)과 **토큰 영속화**(`VELOG_TOKEN_FILE`)를 추가로 지원한다. 즉 환경변수 측면에서는 TS의 상위 집합이다.
 - Schema는 Go의 struct 태그(`json`, `jsonschema`)로부터 자동 추론된다. 즉, TypeScript의 zod 정의를 그대로 옮긴 셈.
 - `limit` 기본값(20)과 `is_markdown=true`는 핸들러에서 보강한다.
 - `tags`, `meta`는 누락된 경우 빈 배열/객체로 채워서 보낸다 (zod default 동치).
